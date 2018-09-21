@@ -1,11 +1,15 @@
 #pragma once
 #include "math.h"
 
+
 #ifndef _VECTOR3D
 #define _VECTOR3D
 
 namespace mffg
 {
+	//Forward Declarations
+	class Matrix3X3;
+
 	//Vector class for 3D
 	class Vector3D
 	{
@@ -97,8 +101,8 @@ namespace mffg
 	inline Vector3D Cross(const Vector3D& a, const Vector3D& b)
 	{
 		return (Vector3D(a.y * b.z - a.z * b.y,
-						 a.z * b.x - a.x * b.z,
-						 a.x * b.y - a.y * b.x));
+			a.z * b.x - a.x * b.z,
+			a.x * b.y - a.y * b.x));
 	}
 
 	//Vector3D projection operation of 3D vector a onto 3D vector b
@@ -107,7 +111,7 @@ namespace mffg
 		return (b * (Dot(a, b) / Dot(b, b)));
 	}
 	/*one of the primary functions of vector projection is a process
-	known as orthagonalization, in which each memeber of a set of 
+	known as orthagonalization, in which each memeber of a set of
 	vectors is modified so that it is perpendicular to all other
 	members of the set.*/
 

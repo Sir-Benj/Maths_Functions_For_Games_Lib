@@ -64,7 +64,7 @@ namespace mffg
 	Vector3D operator *(const Matrix3X3& M, const Vector3D& v)
 	{
 		return (Vector3D(M(0, 0) * v.x + M(0, 1) * v.y + M(0, 2) * v.z,
-						 M(1, 0) * v.x + M(1, 1) * v.y + M(1, 2) * v.z,
-						 M(2, 0) * v.x + M(2, 1) * v.y + M(2, 2) * v.z));
+			M(1, 0) * v.x + M(1, 1) * v.y + M(1, 2) * v.z,
+			M(2, 0) * v.x + M(2, 1) * v.y + M(2, 2) * v.z));
 	}
 }
