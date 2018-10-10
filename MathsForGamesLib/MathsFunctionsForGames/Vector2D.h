@@ -119,6 +119,5 @@ namespace mffg
 	{
 		return (a - b * (Dot(a, b) / Dot(b, b)));
 	}
-
 }
 #endif

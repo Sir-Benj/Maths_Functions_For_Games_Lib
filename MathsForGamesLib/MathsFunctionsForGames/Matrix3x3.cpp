@@ -19,7 +19,7 @@ namespace mffg
 	}
 
 
-	Matrix3X3::Matrix3X3(const Vector2D & a, const Vector2D & b, const Vector2D & c)
+	Matrix3X3::Matrix3X3(const Vector3D & a, const Vector3D & b, const Vector3D & c)
 	{
 		n[0][0] = a.x; n[0][1] = a.y; n[0][2] = a.z;
 		n[1][0] = b.x; n[1][1] = b.y; n[1][2] = b.z;
@@ -36,14 +36,14 @@ namespace mffg
 		return (n[j][i]);
 	}
 
-	Vector2D& Matrix3X3::operator [](int j)
+	Vector3D& Matrix3X3::operator [](int j)
 	{
-		return (*reinterpret_cast<Vector2D*>(n[j]));
+		return (*reinterpret_cast<Vector3D*>(n[j]));
 	}
 
-	const Vector2D& Matrix3X3::operator [](int j) const
+	const Vector3D& Matrix3X3::operator [](int j) const
 	{
-		return (*reinterpret_cast<const Vector2D*>(n[j]));
+		return (*reinterpret_cast<const Vector3D*>(n[j]));
 	}
 
 	Matrix3X3 operator *(const Matrix3X3& A, const Matrix3X3& B)
