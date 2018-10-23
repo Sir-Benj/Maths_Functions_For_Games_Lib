@@ -44,13 +44,13 @@ namespace mffg
 		Vector4D& operator -=(const Vector4D& v);
 	};
 
-	//Vector4D with scalar multiplication 
+	//Vector4D scalar multiplication 
 	inline Vector4D operator *(const Vector4D& v, float s)
 	{
 		return Vector4D(v.x * s, v.y * s, v.z * s, v.w * s);
 	}
 
-	//Vector4D with scalar division
+	//Vector4D scalar division
 	inline Vector4D operator /(const Vector4D& v, float s)
 	{
 		s = 1.0f / s;
